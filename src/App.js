@@ -1,35 +1,3 @@
-// App.js
-
-// import React from 'react';
-// import Box from '@mui/material/Box';
-// import Typography from '@mui/material/Typography';
-// import Button from '@mui/material/Button';
-// import IconButton from '@mui/material/IconButton';
-// import LightModeIcon from '@mui/icons-material/LightMode';
-// import DarkModeIcon from '@mui/icons-material/DarkMode';
-
-// function App({ toggleTheme, mode }) {
-//   const icon = mode === 'light' ? <LightModeIcon /> : <DarkModeIcon />;
-
-//   return (
-//     <Box sx={{minHeight: '100vh'}} color={'primary.main'} bgcolor={'background.default'} >
-//       <Typography fontWeight={900} sx={{ fontSize: 50 }}>
-//         Este es un texto con la fuente Nunito-Black
-//       </Typography>
-//       <Button onClick={toggleTheme} variant="contained" color="primary" sx={{ mt: 2 }}>
-//         Cambiar Tema
-//       </Button>
-
-//       <IconButton aria-label="toggle-theme" onClick={toggleTheme} sx={{ mt: 2 }}>
-//         {icon}
-//       </IconButton>
-//     </Box>
-//   );
-// }
-
-// export default App;
-
-
 import * as React from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -54,6 +22,7 @@ import LightModeIcon from '@mui/icons-material/LightMode';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
 import MenuIcon from '@mui/icons-material/Menu';
 import About from './sections/About';
+import Projects from './sections/Projects';
 const drawerWidth = 240;
 
 export default function App({window, toggleTheme, mode}) {
@@ -161,7 +130,8 @@ export default function App({window, toggleTheme, mode}) {
         sx={{ flexGrow: 1, p: 3, width: { sm: `calc(100% - ${drawerWidth}px)` } }}
       >
         <Toolbar />
-      <About />
+      <About/>
+      <Projects/>
       </Box>
     </Box>
   );

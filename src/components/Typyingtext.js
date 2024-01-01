@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Typography from '@mui/material/Typography';
 
-const TypingEffect = ({ text, speed }) => {
+const TypingEffect = ({ text, speed, styles }) => {
   const [currentText, setCurrentText] = useState('');
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -18,7 +18,7 @@ const TypingEffect = ({ text, speed }) => {
       clearTimeout(timer);
     };
   }, [currentIndex, speed, text]);
-    return <Typography fontWeight={900} sx={{ fontSize: 40 }}>
+    return <Typography fontWeight={900} sx={{ fontSize: 40, ...styles }}>
         {currentText}
     </Typography>
 };
